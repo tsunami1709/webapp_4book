@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <p>{{V.book}}</p>
+    <form method="POST">
+        <label>Last Reading Day</label>
+        <input name="last_reading_days"/>
+        <label>Page</label>
+        <input name="pages"/>
+        <label>Note</label>
+        <input name="notes"/>
+        <input type="submit" value="Sửa" />
+    </form>
+<h2>Lịch sử gần nhất</h2>
+<p>Start_day: {{V.start_day}}</p>
+<p>Last Reading Day: {{V.last_reading_day}}</p>
+<p>Page: {{V.page}}</p>
+<p>Note: {{V.note}}</p>
+
+<a href="/logout">Log out</a>
+</body>
+</html>

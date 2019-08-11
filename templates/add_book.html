@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+    
+</head>
+<body>
+
+        <!-- def insert_book(user,book,online,start_day,end_day,last_reading_day,page,note):
+        db.thangnq.insert_one({
+        'user':user,
+        'book':book,
+        'online':online,
+        'start_day':start_day,
+        'end_day':end_day,
+        'last_reading_day':last_reading_day,
+        'page':page,
+        'note':note
+    } -->
+
+    <p>{{K.book}}</p>
+    <form method="POST">
+        <label>Start Day</label>
+        <input name="start_dayss"/>
+        <label>Page</label>
+        <input name="pagess"/>
+        <label>Note</label>
+        <input name="notess"/>
+        <input type="submit" value="Thêm" />
+    </form>
+
+    <a href="/logout">Log out</a>
+</body>
+</html>

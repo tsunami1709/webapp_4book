@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="el-card__body">
+        <div class="mb-6 text-center">
+          <img src="https://tinyurl.com/yxhdj43y" alt="ForBook" class="logo_0ce2aea">
+        </div>
+      <div class="my-4 text-center"><h2>Signup to ForBook</h2></div>
+         <form method="POST">
+         <label>Username: (viết liền không dấu)</label>
+         <input name="user" autocomplete="off" autofocus="autofocus" placeholder="Username or email" class="el-input__inner" style="background: rgb(255, 255, 255) !important;"/>
+         <br>
+         <label>Password:</label>
+         <input name="pass"/>
+         <br>
+         <label>Password One more time</label>
+         <input name="pass_again"/>
+         <br>
+         <input type="submit" value="Signup"/>
+     </form>
+    {% if error %}
+      <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+</body>
+</html>

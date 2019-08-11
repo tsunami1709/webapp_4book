@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+           <a class="navbar-branch" href="/">
+                <img src="https://scontent-hkg3-1.xx.fbcdn.net/v/t1.15752-9/67357648_484857542274449_3945196038565920768_n.png?_nc_cat=111&_nc_oc=AQkvgxnnaet6kx5y6cwQZefWjZmBEdbDsDecgDzuocw8Dvcem8wkVksvVvGZzRHCk8c&_nc_ht=scontent-hkg3-1.xx&oh=8e09aeebcf0fa0c2c53b9e9ce149cccb&oe=5DDAB835" height="50" title="Doc sach moi luc moi noi" >
+           </a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon" ></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <form class="form-inline my-2 my-lg-0" action="/search" method="POST">
+                 <input name = "searchss" class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm ..." aria-label="Search">
+                 <button id="color-search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+               </form>
+           </div>
+           <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" >
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" href="#">List</a>
+                    </li>
+                    <li class="nav-item" >
+                          <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" href="/signup">Signup</a>
+                      </li>
+                </ul>
+           </div>
+     </nav>
+     <div class="container-fluid">
+        <div class="jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-xl-2">
+                <a href="#">
+                    <button type="button" class="btn btn-outline-secondary">{{a}}</button>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="row" id="font">
+           {% for v in books %} 
+            <div class="col-xs-6 col-md-3 col-sm-3">
+                    <a href={{v.link_online}} class="thumbnail">
+                        <img src={{v.image}} alt="{{v.name}}" width="150px" height="230px">
+                    </a>
+                    <h5>
+                        <a href={{v.link_online}}>{{v.name}}</a>
+                        <p>{{v.author}}</p>
+                    </h5>
+            </div>
+            {% endfor %}
+        </div>
+    </div>    
+</body>
+</html>

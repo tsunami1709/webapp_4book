@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div class="el-card__body">
+    <div class="mb-6 text-center">
+      <img src="https://tinyurl.com/yxhdj43y" alt="ForBook" class="logo_0ce2aea">
+    </div>
+  <div class="my-4 text-center"><h2>Login to ForBook</h2></div>
+     <form method="POST">
+     <label>Username:</label>
+     <input name="usernames" autocomplete="off" autofocus="autofocus" placeholder="Username or email" class="el-input__inner" style="background: rgb(255, 255, 255) !important;"/>
+     <label>Password:</label>
+     <input name="passwords" type="password" id="myInput"/>
+     <input type="checkbox" onclick="myFunction()"/>Show Password
+     <script>
+      function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+      </script>
+     <input type="submit" value="Login"/>
+ </form>
+{% if error %}
+  <p class="error"><strong>Error:</strong> {{ error }}
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    {% for v in data %}
+    <p>{{v.name}}</p>
+    <a href="{{v.link_online}}" target="_blank">Đọc</a>
+    <form method="POST">
+        <a href="/my_book/add/{{v._id}}">Thêm vào list books</a>
+    </form>
+    {%endfor%}
+
+    <a href="/logout">Log out</a>
+</body>
+</html>

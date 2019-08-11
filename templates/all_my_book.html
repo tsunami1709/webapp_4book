@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <form method="POST">
+            <input name="searchs"/>
+            <input type="submit" value="Tìm kiếm"/>
+    </form>
+
+    {% for v in data %}
+
+    <h1>
+        {{v.book}}
+        <a href="{{v.online}}" target="_blank">Đọc</a>
+        <a href="/my_book/{{v._id}}">Sửa</a>
+    </h1>
+
+    {%endfor%}
+
+    <a href="/logout">Log out</a>
+</body>
+
+</html>
